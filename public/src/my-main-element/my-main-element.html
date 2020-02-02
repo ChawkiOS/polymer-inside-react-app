@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../my-second-element/my-second-element.html">
 
 <dom-module id="my-main-element">
   <template>
@@ -8,6 +9,10 @@
       }
     </style>
     <h2>[[prop]]</h2>
+    <button on-click="_showTheSecondElement">click here !</button>
+    <template is="dom-if" if="[[isShown]]">
+      <my-second-element prop="[[secondElementText]]"></my-second-element>
+    </template>
   </template>
 
   <script>
@@ -22,8 +27,20 @@
           prop: {
             type: String,
             value: 'my-main-element'
+          },
+          secondElementText: {
+            type: String,
+            value: 'and I am the second element'
+          },
+          isShown: {
+            type: Boolean,
+            value: false
           }
         };
+      }
+
+      _showTheSecondElement() {
+        this.set('isShown', true);
       }
     }
 
