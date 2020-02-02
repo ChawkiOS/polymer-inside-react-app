@@ -10,6 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <my-main-element prop="Hello, I am a polymer element!"></my-main-element>
         <a
           className="App-link"
           href="https://reactjs.org"
