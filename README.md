@@ -12,7 +12,7 @@ After creating your polymer element, import it into the `index.html` file
 
 And now, you just need to use your element in your React component (in our case we used it in the `App.js`)
 
-`function App() { return ( <my-main-element"></my-main-element> ); }`
+`function App() { return ( <my-main-element></my-main-element> ); }`
 
 ## Run your app
 
